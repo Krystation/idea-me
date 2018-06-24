@@ -1,0 +1,77 @@
+@import 'reset';
+@import 'globals';
+// > Header
+#header{
+    background: $primary_alt;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        button{
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: none;
+            background-image: url('../images/add_icon.svg');
+            background-size: contain;
+        }
+    }
+}
+
+.content{
+    background: linear-gradient(to bottom, $primary_alt, $primary);
+}
+
+// > Add Item
+#submit_idea{
+    margin-bottom: 24px;
+    form{
+        padding: 18px 0;
+        max-width: 300px;
+        width: 80%;
+        margin: auto;
+        background: $primary;
+        text-align: center;
+    }
+    input, button{
+        display: block;
+        margin: auto;
+    }
+
+    input{
+        box-sizing: border-box;
+        width: 90%;
+        padding: 6px;
+        margin: 0 auto 24px;
+    }
+    button{
+        background: $secondary;
+        padding: 12px;
+        border: none;
+        color: white;
+        transition: background .4s ease-in-out;
+        font:{
+            size: 18px;
+            weight: 600;
+        }
+        &:hover{
+            background: $secondary_alt;
+        }
+    }
+}
+
+// > Wak List
+.wakList{
+    padding: 36px 0;
+    max-width: 500px;
+    width: 90%;
+    max-height: 350px;
+    margin: auto;
+    overflow-y: scroll;
+    li{
+        color: white;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+}

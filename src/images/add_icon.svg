@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #003e69;
+      }
+
+      .cls-2 {
+        fill: #ffc20e;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #faa624;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        stroke-width: 0.48px;
+      }
+
+      .cls-5 {
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+  <title>add_icon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_2-2" data-name="Layer 2">
+      <circle class="cls-1" cx="19" cy="19" r="19"/>
+      <g>
+        <rect class="cls-2" x="16.25" y="6.93" width="5.66" height="25.05" transform="translate(25.52 -7.02) rotate(58.1)"/>
+        <polygon class="cls-3" points="6.95 23.68 9.93 28.48 5.22 28.23 6.95 23.68"/>
+        <path class="cls-3" d="M28.21,11.26H33a.46.46,0,0,1,.46.46v1.61a0,0,0,0,1,0,0H27.76a0,0,0,0,1,0,0V11.72A.46.46,0,0,1,28.21,11.26Z" transform="matrix(0.53, 0.85, -0.85, 0.53, 24.86, -20.17)"/>
+        <path class="cls-4" d="M7.22,24.12,26.65,12a.49.49,0,0,1,.68.14l1.83,2.94a.5.5,0,0,1-.18.68L9.56,27.88"/>
+        <line class="cls-5" x1="28.24" y1="13.64" x2="8.49" y2="25.95"/>
+      </g>
+    </g>
+  </g>
+</svg>

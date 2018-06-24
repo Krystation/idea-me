@@ -1,0 +1,23 @@
+$primary: #003E69;
+$primary_alt: #009ED4;
+$secondary: #FAA624;
+$secondary_alt:#FFC20E;
+
+$font: 'Lobster', cursive;
+
+body{
+    font-family: $font;
+}
+
+.wrapper{
+   box-sizing: border-box; 
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    padding: 0 6px;
+}
+
+@mixin size($w, $h: $w){
+    width: $w;
+    height: $h;
+}
