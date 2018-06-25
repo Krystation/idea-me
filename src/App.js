@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Head from './Head';
 import './stylez/styles.css';
 import AddItem from './AddItem';
+import RandomResult from './RadomizeResult';
 import firebase from './firebase';
 
 class App extends Component {
@@ -9,8 +10,11 @@ class App extends Component {
     super();
     this.state = {
       newIdea: '',
-      wakItems: []
+      wakItems: [],
+      currentIdea: 'Your Wak Project is...',
+      addNewActive: false
     }
+    this.shuffleIdea = this.shuffleIdea.bind(this);
   }
   componentDidMount(){
     const itemRef = firebase.database().ref('wakWednesday');
@@ -27,12 +31,29 @@ class App extends Component {
       this.setState({wakItems: newState})
     });
   }
+
+  shuffleIdea(){
+    let randNum = Math.floor(Math.random() * (this.state.wakItems.length - 1)) + 1;
+    this.setState({
+      currentIdea: this.state.wakItems[randNum].idea
+    }); 
+  }
+
+  addNew = (active) =>{
+
+  }
+  
   render() {
     return (
       <div className="App">          
-        <Head/>
+        <Head activeState={this.addNew}/>
+        <div className="overlay"></div>
         <div className="content">
           <AddItem/>
+          <div id="random_result">
+            <span>{this.state.currentIdea}</span>
+          </div>
+          <div id="randomizer" onClick={this.shuffleIdea}></div>
           <div className="wakList">
             <ul>
               {this.state.wakItems.map((item) => {
