@@ -21,6 +21,7 @@
 
 .content{
     background: linear-gradient(to bottom, $primary_alt, $primary);
+    min-height: calc(100vh - 135px);
 }
 
 #overlay{
@@ -32,6 +33,13 @@
     left: 0;
     margin: auto;
     background: rgba(black, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 // > Add Item
@@ -39,6 +47,7 @@
     position: absolute;
     top: 50vh;
     left: 50%;
+    width: 95%;
     z-index: 30;
     margin: 0 auto 24px;
     transform: translate(-50%);
@@ -54,7 +63,7 @@
         max-width: 300px;
         width: 80%;
         margin: auto;
-        background: $primary;
+        background: $primary_alt;
         text-align: center;
     }
     input, button{
@@ -104,6 +113,7 @@
     height: 300px;
     margin: auto;
     overflow-y: scroll;
+    display: none;
     li{
         color: white;
         font-size: 18px;
@@ -114,7 +124,7 @@
 // > Random Result
 #random_result{
     text-align: center;
-    padding: 15px 0;
+    padding: 45px 12px;
     color: white;
     font:{
         size: 30px;

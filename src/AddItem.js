@@ -24,7 +24,7 @@ class AddItem extends Component{
     }
     render(){
         return(
-            <div id="submit_idea">
+            <div id="submit_idea" className={this.props.activeClass}>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.idea} name="idea" onChange={this.handleChange} placeholder="What's your new idea?" />
                     <button type="submit">Submit</button>

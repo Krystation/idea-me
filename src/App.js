@@ -12,9 +12,10 @@ class App extends Component {
       newIdea: '',
       wakItems: [],
       currentIdea: 'Your Wak Project is...',
-      addNewActive: false
+      addNewActive: ''
     }
     this.shuffleIdea = this.shuffleIdea.bind(this);
+    this.addNew = this.addNew.bind(this);
   }
   componentDidMount(){
     const itemRef = firebase.database().ref('wakWednesday');
@@ -39,21 +40,28 @@ class App extends Component {
     }); 
   }
 
-  addNew = (active) =>{
+  addNew(data){
+    if(data === ''){
+      this.setState({addNewActive: ''})
+    }else{
+      this.setState({addNewActive: 'active'})
+    }
+  }
 
+  toggle(){
+    this.setState({addNewActive: !this.state.addNewActive});
   }
   
   render() {
     return (
       <div className="App">          
         <Head activeState={this.addNew}/>
-        <div className="overlay"></div>
         <div className="content">
-          <AddItem/>
+          <AddItem activeClass={this.state.addNewActive}/>
+          <div id="randomizer" onClick={this.shuffleIdea}></div>
           <div id="random_result">
             <span>{this.state.currentIdea}</span>
           </div>
-          <div id="randomizer" onClick={this.shuffleIdea}></div>
           <div className="wakList">
             <ul>
               {this.state.wakItems.map((item) => {
