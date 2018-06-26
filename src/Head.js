@@ -3,9 +3,6 @@ import React, { Component } from "react";
 class Head extends Component{
     constructor(){
         super();
-        toggleActive = props =>{
-            this.setState({this.state.activeState: !this.state.activeState})
-        }
     }
 
     render(){
